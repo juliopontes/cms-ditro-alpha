@@ -1,0 +1,18 @@
+{
+    "name": "jquery/core",
+    "type": "cms-media",
+    "license": "GPLv3",
+    "description": "Joomla User Interface",
+    "keywords": ["joomla", "user", "interface"],
+    "homepage": "https://github.com/joomla-distro/cms-administrator-application",
+    "authors": [
+        {
+            "name": "Julio Pontes",
+            "email": "juliopfneto@gmail.com",
+            "homepage": ""
+        }
+    ],
+    "require": {
+        "joomla-distro/jquery-core": "*",
+    }
+}
