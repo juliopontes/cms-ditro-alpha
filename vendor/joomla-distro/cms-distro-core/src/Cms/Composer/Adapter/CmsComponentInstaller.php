@@ -13,4 +13,5 @@ use Composer\Package\PackageInterface;
 class CmsComponentInstaller extends BaseInstaller
 {
     protected $location = 'components/{vendor}/{package}';
+    protected $support = 'cms-component';
 }

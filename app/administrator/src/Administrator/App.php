@@ -14,6 +14,7 @@ use Joomla\Language\Language;
 use Joomla\Language\Text;
 use Joomla\Session\Session;
 use Joomla\Registry\Registry;
+use Joomla\Filesystem\Path;
 
 //@todo fix that
 class_alias('Joomla\Language\Text','JText');
@@ -92,18 +93,26 @@ final class App extends AbstractWebApplication implements ContainerAwareInterfac
             }
 
             $router->addMaps($maps, true);
-            $router->setControllerPrefix('\\App');
-            $router->setDefaultController('\\Controller\\DefaultController');
+            $router->setControllerPrefix('\\'.__NAMESPACE__);
+            $router->setDefaultController('Component');
 
             // Fetch the controller
             /* @type ControllerInterface $controller */
-            $controller = $router->getController($this->get('uri.route'));
-            $content = $controller->execute();
+            $component = $router->getController($this->get('uri.route'));
+            ob_start();
+            $component->execute();
+            $content = ob_get_contents();
+            ob_end_clean();
 
             // render template
-            $template_path = JPATH_TEMPLATES.'/'.$this->get('default.theme').'/index.php';
+            $path = JPATH_WEB.'/templates/'.$this->getTemplate();
+
+            $template_path = Path::find(array($path), $this->input->getCmd('tmpl','index') . '.php');
+            if (!$template_path) {
+                $template_path = $path.'/index.php';
+            }
             if (!is_file($template_path)) {
-                throw new Exception('Template not found');
+                throw new \Exception('Template not found');
             }
             $this->setBody(str_replace('{component}',$content,file_get_contents($template_path)));
         }

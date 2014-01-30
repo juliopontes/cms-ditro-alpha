@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->get('default.language'); ?>" lang="<?php echo $this->get('default.language'); ?>" dir="<?php echo $this->getLanguage()->isRTL() ? 'rtl' : '' ; ?>">
 	<head>
-		<link href="../../app/installer/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-		<link rel="stylesheet" href="../media/bootstrap/v3/css/bootstrap.min.css" type="text/css" />
-		<link rel="stylesheet" href="../media/bootstrap/v3/css/bootstrap-responsive.min.css" type="text/css" />
-		<link rel="stylesheet" href="../media/bootstrap/v3/css/bootstrap-extended.css" type="text/css" />
-		<link rel="stylesheet" href="../../app/installer/template/css/template.css" type="text/css" />
+		<link href="../media/joomla-distro/media-installer/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+		<link rel="stylesheet" href="../media/bootstrap/v2/css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="../media/bootstrap/v2/css/bootstrap-responsive.min.css" type="text/css" />
+		<link rel="stylesheet" href="../media/bootstrap/v2/css/bootstrap-extended.css" type="text/css" />
+		<link rel="stylesheet" href="../media/joomla-distro/media-installer/css/template.css" type="text/css" />
 		<link rel="stylesheet" href="../media/joomla/jui/css/chosen.css" type="text/css" />
 		<link rel="stylesheet" href="../media/joomla/jui/css/spinner.css" type="text/css" />
 		<script src="../media/jquery/core/js/jquery.min.js" type="text/javascript"></script>
 		<script src="../media/jquery/core/js/jquery-migrate.min.js" type="text/javascript"></script>
 		<script src="../media/joomla/jui/js/spin.min.js" type="text/javascript"></script>
-		<script src="../media/bootstrap/v3/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="../media/bootstrap/v2/js/bootstrap.min.js" type="text/javascript"></script>
 		<script src="../media/joomla/jui/js/chosen.jquery.min.js" type="text/javascript"></script>
 		<script src="../media/joomla/jui/js/joomla.min.js" type="text/javascript"></script>
 		<script src="../media/joomla/jui/js/validator.min.js" type="text/javascript"></script>
-		<script src="../../app/installer/template/js/installation.js" type="text/javascript"></script>
+		<script src="../media/joomla-distro/media-installer/js/installation.js" type="text/javascript"></script>
 		<!--[if lt IE 9]>
 			<script src="../media/joomla/jui/js/html5.js"></script>
 		<![endif]-->
@@ -31,7 +31,7 @@
 	<body>
 		<!-- Header -->
 		<div class="header">
-			<img src="../../app/installer/template/images/joomla.png" alt="Joomla" />
+			<img src="../media/joomla-distro/media-installer/images/joomla.png" alt="Joomla" />
 			<hr />
 			<h5>
 				<?php

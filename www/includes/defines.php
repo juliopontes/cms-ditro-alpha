@@ -10,8 +10,8 @@ define('JPATH_CONFIGURATION', JPATH_PROJECT);
 // autocreate define app path: JPATH_APP_FOLDERNAME
 $directories = glob(JPATH_APP.'/*', GLOB_ONLYDIR);
 foreach ($directories as $directory) {
-	$define_var = 'JPATH_APP_'.strtoupper(basename($directory));
+	$define_var = trim('JPATH_APP_'.strtoupper(basename($directory)));
 	if (!defined($define_var)) {
-		define($define_var, JPATH_APP . '/' . basename($directory));
+		define($define_var, $directory);
 	}
 }

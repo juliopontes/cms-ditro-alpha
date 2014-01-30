@@ -3,8 +3,22 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "59d8bccb34064be16e63d7f47b3791d5",
+    "hash": "eb94ce452299c5c26e37be38f1f84625",
     "packages": [
+        {
+            "name": "bootstrap/v2",
+            "version": "0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/joomla-distro/bootstrap-v2/archive/master.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "joomla-distro/cms-distro-core": "*"
+            },
+            "type": "cms-media"
+        },
         {
             "name": "bootstrap/v3",
             "version": "0.1",
@@ -116,7 +130,11 @@
                 "shasum": null
             },
             "require": {
-                "joomla-distro/cms-distro-core": "*"
+                "bootstrap/v2": "*",
+                "joomla-distro/cms-distro-core": "*",
+                "joomla-distro/media-installer": "*",
+                "joomla/jui": "*",
+                "jquery/core": "*"
             },
             "type": "cms-application",
             "autoload": {
@@ -124,6 +142,54 @@
                     "Installer": "src"
                 }
             }
+        },
+        {
+            "name": "joomla-distro/cms-lite-template",
+            "version": "0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/joomla-distro/cms-lite-template/archive/master.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "bootstrap/v3": "*",
+                "joomla-distro/cms-distro-core": "*"
+            },
+            "type": "cms-template"
+        },
+        {
+            "name": "joomla-distro/cms-users",
+            "version": "0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/joomla-distro/cms-users/archive/master.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "joomla-distro/cms-distro-core": "*"
+            },
+            "type": "cms-component",
+            "autoload": {
+                "psr-0": {
+                    "Component": "src"
+                }
+            }
+        },
+        {
+            "name": "joomla-distro/media-installer",
+            "version": "0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/joomla-distro/media-installer/archive/master.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "joomla-distro/cms-distro-core": "*"
+            },
+            "type": "cms-media"
         },
         {
             "name": "joomla/framework",

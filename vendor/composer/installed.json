@@ -26,6 +26,27 @@
         }
     },
     {
+        "name": "joomla-distro/cms-administrator-application",
+        "version": "0.1",
+        "version_normalized": "0.1.0.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/joomla-distro/cms-administrator-application/archive/master.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "joomla-distro/cms-distro-core": "*"
+        },
+        "type": "cms-application",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Administrator": "src"
+            }
+        }
+    },
+    {
         "name": "joomla/jui",
         "version": "0.1",
         "version_normalized": "0.1.0.0",
@@ -58,12 +79,28 @@
         "installation-source": "dist"
     },
     {
-        "name": "bootstrap/v3",
+        "name": "bootstrap/v2",
         "version": "0.1",
         "version_normalized": "0.1.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/joomla-distro/bootstrap-v3/archive/master.zip",
+            "url": "https://github.com/joomla-distro/bootstrap-v2/archive/master.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "joomla-distro/cms-distro-core": "*"
+        },
+        "type": "cms-media",
+        "installation-source": "dist"
+    },
+    {
+        "name": "joomla-distro/media-installer",
+        "version": "0.1",
+        "version_normalized": "0.1.0.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/joomla-distro/media-installer/archive/master.zip",
             "reference": null,
             "shasum": null
         },
@@ -84,7 +121,11 @@
             "shasum": null
         },
         "require": {
-            "joomla-distro/cms-distro-core": "*"
+            "bootstrap/v2": "*",
+            "joomla-distro/cms-distro-core": "*",
+            "joomla-distro/media-installer": "*",
+            "joomla/jui": "*",
+            "jquery/core": "*"
         },
         "type": "cms-application",
         "installation-source": "dist",
@@ -95,23 +136,56 @@
         }
     },
     {
-        "name": "joomla-distro/cms-administrator-application",
+        "name": "bootstrap/v3",
         "version": "0.1",
         "version_normalized": "0.1.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://github.com/joomla-distro/cms-administrator-application/archive/master.zip",
+            "url": "https://github.com/joomla-distro/bootstrap-v3/archive/master.zip",
             "reference": null,
             "shasum": null
         },
         "require": {
             "joomla-distro/cms-distro-core": "*"
         },
-        "type": "cms-application",
+        "type": "cms-media",
+        "installation-source": "dist"
+    },
+    {
+        "name": "joomla-distro/cms-lite-template",
+        "version": "0.1",
+        "version_normalized": "0.1.0.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/joomla-distro/cms-lite-template/archive/master.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "bootstrap/v3": "*",
+            "joomla-distro/cms-distro-core": "*"
+        },
+        "type": "cms-template",
+        "installation-source": "dist"
+    },
+    {
+        "name": "joomla-distro/cms-users",
+        "version": "0.1",
+        "version_normalized": "0.1.0.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/joomla-distro/cms-users/archive/master.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "joomla-distro/cms-distro-core": "*"
+        },
+        "type": "cms-component",
         "installation-source": "dist",
         "autoload": {
             "psr-0": {
-                "Administrator": "src"
+                "Component": "src"
             }
         }
     },

@@ -1,4 +1,8 @@
-cms-ditro-alpha
-===============
+cms-distro-alpha
+==============
 
-CMS Distro Alpha
+CMS DISTRO ALPHA
+
+- Administrator
+- Installation
+- Users Component

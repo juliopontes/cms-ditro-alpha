@@ -6,11 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    0 => array($vendorDir . '/joomla-distro/cms-distro-core/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log'),
     'Psr' => array($vendorDir . '/joomla/framework/vendor/psr/cache'),
     'Joomla' => array($vendorDir . '/joomla/framework/src'),
     'Installer' => array($baseDir . '/app/installer/src'),
     'Hautelook' => array($vendorDir . '/hautelook/phpass/src'),
+    'Component' => array($baseDir . '/components/joomla-distro/cms-users/src'),
     'Administrator' => array($baseDir . '/app/administrator/src'),
+    0 => array($vendorDir . '/joomla-distro/cms-distro-core/src'),
 );

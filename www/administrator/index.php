@@ -9,8 +9,8 @@ require_once '../includes/autoload.php';
 define('JPATH_ROOT', JPATH_APP_ADMINISTRATOR);
 
 $container = new \Joomla\DI\Container;
-$container->registerServiceProvider(new \Installer\Service\ConfigurationServiceProvider(JPATH_ROOT . '/etc/config.json'))
-    ->registerServiceProvider(new \Installer\Service\DatabaseServiceProvider);
+$container->registerServiceProvider(new \Administrator\Service\ConfigurationServiceProvider(JPATH_ROOT . '/etc/config.json'))
+    ->registerServiceProvider(new \Administrator\Service\DatabaseServiceProvider);
 
 // Instantiate the application.
 $application = new \Administrator\App($container);

@@ -13,4 +13,5 @@ use Composer\Package\PackageInterface;
 class CmsMediaInstaller extends BaseInstaller
 {
     protected $location = 'www/media/{vendor}/{package}';
+    protected $support = 'cms-media';
 }

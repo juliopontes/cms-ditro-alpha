@@ -13,6 +13,7 @@ use Composer\Package\PackageInterface;
 class CmsApplicationInstaller extends BaseInstaller
 {
     protected $location = 'app/{application}';
+    protected $support = 'cms-application';
 
     /**
      * Return string path
@@ -22,9 +23,8 @@ class CmsApplicationInstaller extends BaseInstaller
     {
         // Example vendor/cms-installation-application, cms-administrator-application, cms-frontend-application
         $parts = explode('/', $package->getName());
-        $application = str_replace('-application','', $parts[1]);
-        $application = str_replace('cms-','', $application);
-        $this->vars['application'] = $application;
+        $vars = explode('-', $parts[1]);
+        $this->vars['application'] = trim($vars[1]);
 
     	return parent::getLocation($package);
     }
