@@ -28,16 +28,20 @@ class DatabaseServiceProvider implements ServiceProviderInterface
 				$config = $container->get('config');
 
 				$options = array(
-					'driver' => $config->get('database.driver'),
-					'host' => $config->get('database.host'),
-					'user' => $config->get('database.user'),
-					'password' => $config->get('database.password'),
-					'database' => $config->get('database.name'),
-					'prefix' => $config->get('database.prefix')
+					'driver' => $config->get('dbtype'),
+					'host' => $config->get('host'),
+					'user' => $config->get('user'),
+					'password' => $config->get('password'),
+					'database' => $config->get('db'),
+					'prefix' => $config->get('dbprefix')
 				);
 
 				$db = DatabaseDriver::getInstance($options);
 				$db->setDebug($config->get('debug.database', false));
+
+				if (!$db->connected()) {
+					$db->connect();
+				}
 
 				return $db;
 			}, true, true

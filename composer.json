@@ -1,5 +1,10 @@
 {
-    "repositories": [ { "type": "composer", "url": "https://github.com/joomla-distro/packagist/raw/master/web/" } ],
+	"name": "juliopontes/cms-distro-alpha",
+	"type": "project",
+	"description": "The most basic distributions of the Joomla CMS used to custom build itself.",
+	"keywords": ["joomla", "cms", "content management"],
+	"homepage": "https://github.com/juliopontes/cms-distro-alpha",
+	"license": "GPL-2+",
     "require": {
         "joomla-distro/cms-administrator-application": "*",
         "joomla-distro/cms-installer-application": "*",
@@ -7,5 +12,6 @@
         "joomla-distro/cms-users": "*",
         "joomla/framework": "1.0.*@stable",
         "hautelook/phpass": "dev-master"
-    }
+    },
+    "repositories": [ { "type": "composer", "url": "https://github.com/joomla-distro/packagist/raw/master/web/" } ]
 }

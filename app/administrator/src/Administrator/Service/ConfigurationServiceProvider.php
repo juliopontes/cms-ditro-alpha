@@ -72,6 +72,11 @@ class ConfigurationServiceProvider implements ServiceProviderInterface
 		$this->config = $config;
 	}
 
+	public function getConfig()
+	{
+		return $this->config;
+	}
+
 	/**
 	 * {@inheritdoc}
 	 */
