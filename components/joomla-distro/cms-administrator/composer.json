@@ -1,0 +1,21 @@
+{
+    "name": "joomla-distro/cms-administrator",
+    "type": "cms-component",
+    "license": "GPLv3",
+    "description": "Joomla Administrator Component",
+    "keywords": ["joomla", "user", "interface"],
+    "homepage": "https://github.com/joomla-distro/cms-users",
+    "authors": [
+        {
+            "name": "Julio Pontes",
+            "email": "juliopfneto@gmail.com",
+            "homepage": ""
+        }
+    ],
+    "autoload": {
+        "psr-0": {"Component": "src"}
+    },
+    "require": {
+        "joomla-distro/joomla-distro-core": "*",
+    }
+}

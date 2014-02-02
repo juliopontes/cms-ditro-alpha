@@ -4,7 +4,7 @@
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Administrator\Router;
+namespace Component\Administrator\Frontend\Router;
 
 use Joomla\Application\AbstractApplication;
 use Joomla\Controller\ControllerInterface;
@@ -17,7 +17,7 @@ use Joomla\Router\Router;
  *
  * @since  1.0
  */
-class AppRouter extends Router
+class ComponentRouter extends Router
 {
     /**
      * Application object to inject into controllers
@@ -44,7 +44,7 @@ class AppRouter extends Router
     }
 
     /**
-     * Get a ControllerInterface object for a given name.
+     * Fetch a ControllerInterface object for a given name.
      *
      * @param   string  $name  The controller name (excluding prefix) for which to fetch and instance.
      *
@@ -56,7 +56,7 @@ class AppRouter extends Router
     protected function fetchController($name)
     {
         // Derive the controller class name.
-        $class = sprintf('%s\%s%s\Dispatcher',ucfirst($name),ucfirst(strtolower($this->app->input->getCmd('option', 'Users'))), $this->controllerPrefix);
+        $class = $this->controllerPrefix . '\\' . $this->input->getCmd('component', 'Users') . ucfirst($name);
 
         // Instantiate the controller.
         $controller = new $class($this->app->getContainer());

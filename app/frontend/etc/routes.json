@@ -1,0 +1,4 @@
+{
+	"/:option/": "\\Component",
+    "/:option/:view/": "\\Component"
+}

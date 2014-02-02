@@ -11,7 +11,7 @@ return array(
     'Joomla' => array($vendorDir . '/joomla/framework/src'),
     'Installer' => array($baseDir . '/app/installer/src'),
     'Hautelook' => array($vendorDir . '/hautelook/phpass/src'),
-    'Component' => array($baseDir . '/components/joomla-distro/cms-users/src'),
-    'Administrator' => array($baseDir . '/app/administrator/src'),
+    'Frontend' => array($baseDir . '/app/frontend/src'),
+    'Component' => array($baseDir . '/components/joomla-distro/cms-users/src', $baseDir . '/components/joomla-distro/cms-administrator/src'),
     0 => array($vendorDir . '/joomla-distro/cms-distro-core/src'),
 );

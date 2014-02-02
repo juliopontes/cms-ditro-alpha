@@ -6,10 +6,11 @@
 	"homepage": "https://github.com/juliopontes/cms-distro-alpha",
 	"license": "GPL-2+",
     "require": {
-        "joomla-distro/cms-administrator-application": "*",
+        "joomla-distro/cms-frontend-application": "*",
         "joomla-distro/cms-installer-application": "*",
         "joomla-distro/cms-lite-template": "*",
         "joomla-distro/cms-users": "*",
+        "joomla-distro/cms-administrator": "*",
         "joomla/framework": "1.0.*@stable",
         "hautelook/phpass": "dev-master"
     },

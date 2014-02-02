@@ -4,14 +4,14 @@
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Component\Users\Administrator;
+namespace Component\Administrator\Frontend;
 
 use Joomla\Application\AbstractWebApplication;
 use Joomla\Controller\ControllerInterface;
 use Joomla\DI\Container;
 use Joomla\DI\ContainerAwareInterface;
 
-use Component\Users\Administrator\Router\ComponentRouter;
+use Component\Administrator\Frontend\Router\ComponentRouter;
 
 /**
  * Application class
@@ -57,7 +57,7 @@ final class Dispatcher extends AbstractWebApplication implements ContainerAwareI
 
             $root_path = dirname(dirname(dirname(dirname(__DIR__))));
 
-            $routes_path = $root_path . '/routes/administrator.json';
+            $routes_path = $root_path . '/routes/frontend.json';
             if (!file_exists($routes_path)) {
                 $routes = '{}';
             } else {
@@ -71,11 +71,11 @@ final class Dispatcher extends AbstractWebApplication implements ContainerAwareI
             }
 
             $router->addMaps($maps, true);
-            $router->setControllerPrefix(__NAMESPACE__);
-            $router->setDefaultController('\\Controller\\DefaultController');
+            $router->setControllerPrefix('\\Component');
+            $router->setDefaultController('\\Administrator\\Dispatcher');
             // Fetch the controller
-            $controller = $router->getController($this->get('uri.route'));
-            $controller->execute();
+            $component = $router->getController($this->get('uri.route'));
+            $component->execute();
         }
         catch (\Exception $exception)
         {

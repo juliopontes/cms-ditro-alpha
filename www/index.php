@@ -11,12 +11,12 @@ if (!is_file(JPATH_CONFIGURATION.'/configuration.php')) {
 	header('location: '.$uri.'installation');
 }
 
-define('JPATH_ROOT', JPATH_APP_ADMINISTRATOR);
+define('JPATH_ROOT', JPATH_APP_FRONTEND);
 
 $container = new \Joomla\DI\Container;
 
 // read config and merge with configuration.php
-$config = new \Administrator\Service\ConfigurationServiceProvider(JPATH_ROOT . '/etc/config.json');
+$config = new \Frontend\Service\ConfigurationServiceProvider(JPATH_ROOT . '/etc/config.json');
 
 $jconfig = \Joomla\Registry\Registry::getInstance('configuration');
 require_once JPATH_CONFIGURATION.'/configuration.php';
@@ -24,10 +24,10 @@ $jconfig->loadObject(new \JConfig);
 $config->getConfig()->merge($jconfig);
 
 $container->registerServiceProvider($config)
-    ->registerServiceProvider(new \Administrator\Service\DatabaseServiceProvider);
+    ->registerServiceProvider(new \Frontend\Service\DatabaseServiceProvider);
 
 // Instantiate the application.
-$application = new \Administrator\App($container);
+$application = new \Frontend\App($container);
 
 // Execute the application.
 $application->execute();

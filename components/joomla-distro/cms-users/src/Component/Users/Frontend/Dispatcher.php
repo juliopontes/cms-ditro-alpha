@@ -4,7 +4,7 @@
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-namespace Component\Users\Administrator;
+namespace Component\Users\Frontend;
 
 use Joomla\Application\AbstractWebApplication;
 use Joomla\Controller\ControllerInterface;
@@ -57,7 +57,7 @@ final class Dispatcher extends AbstractWebApplication implements ContainerAwareI
 
             $root_path = dirname(dirname(dirname(dirname(__DIR__))));
 
-            $routes_path = $root_path . '/routes/administrator.json';
+            $routes_path = $root_path . '/routes/frontend.json';
             if (!file_exists($routes_path)) {
                 $routes = '{}';
             } else {

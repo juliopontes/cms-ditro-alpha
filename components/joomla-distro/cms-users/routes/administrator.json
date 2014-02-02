@@ -1,3 +1,4 @@
 {
-    "users": "\\Controller\\UsersController"
+    "administrator": "\\Controller\\UsersController",
+    "administrator/users": "\\Controller\\UsersController"
 }

@@ -1,0 +1,4 @@
+{
+    "administrator": "\\Administrator\\Dispatcher",
+    "administrator/:component": "\\Administrator\\Dispatcher"
+}

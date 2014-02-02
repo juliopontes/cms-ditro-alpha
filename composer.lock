@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "13ded43986ca1e6dc26af038524e0372",
+    "hash": "b42db6df23f4cd5b9ab00ac8a0535aca",
     "packages": [
         {
             "name": "bootstrap/v2",
@@ -78,21 +78,21 @@
             "time": "2013-05-01 13:59:26"
         },
         {
-            "name": "joomla-distro/cms-administrator-application",
+            "name": "joomla-distro/cms-administrator",
             "version": "0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/joomla-distro/cms-administrator-application/archive/master.zip",
+                "url": "https://github.com/joomla-distro/cms-administrator/archive/master.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "joomla-distro/cms-distro-core": "*"
             },
-            "type": "cms-application",
+            "type": "cms-component",
             "autoload": {
                 "psr-0": {
-                    "Administrator": "src"
+                    "Component": "src"
                 }
             }
         },
@@ -118,6 +118,25 @@
                         "Cms\\Composer": "src/"
                     }
                 ]
+            }
+        },
+        {
+            "name": "joomla-distro/cms-frontend-application",
+            "version": "0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/joomla-distro/cms-frontend-application/archive/master.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "joomla-distro/cms-distro-core": "*"
+            },
+            "type": "cms-application",
+            "autoload": {
+                "psr-0": {
+                    "Frontend": "src"
+                }
             }
         },
         {

@@ -1,10 +1,10 @@
 {
-    "name": "joomla-distro/cms-administrator-application",
+    "name": "joomla-distro/cms-frontend-application",
     "type": "cms-application",
     "license": "GPLv3",
-    "description": "Joomla CMS Administrator Application",
+    "description": "Joomla CMS Frontend Application",
     "keywords": ["joomla", "installer", "application"],
-    "homepage": "https://github.com/joomla-distro/cms-administrator-application",
+    "homepage": "https://github.com/joomla-distro/cms-frontend-application",
     "authors": [
         {
             "name": "Julio Pontes",
@@ -13,7 +13,7 @@
         }
     ],
     "autoload": {
-        "psr-0": {"Administrator": "src"}
+        "psr-0": {"Frontend": "src"}
     },
     "require": {
         "joomla-distro/joomla-distro-core": "*"

@@ -1,6 +1,6 @@
 <?php
 
-namespace Component\Users\Administrator\View;
+namespace Component\Users\Frontend\View;
 
 use Joomla\Application\AbstractWebApplication;
 use Joomla\Model\AbstractModel;
@@ -21,9 +21,9 @@ class DefaultHtmlView extends AbstractHtmlView
 
         $root_dir = dirname(dirname(dirname(dirname(dirname(__DIR__)))));
 
-        $q->insert(JPATH_WEB.'/template/'. $this->application->getContainer()->get('config')->get('default.theme') .'/html/administrator/com_users', 1);
+        $q->insert(JPATH_WEB.'/template/'. $this->application->getContainer()->get('config')->get('default.theme') .'/html/frontend/com_users', 1);
         $q->insert(JPATH_WEB.'/template/'. $this->application->getContainer()->get('config')->get('default.theme') .'/html/com_users', 2);
-        $q->insert($root_dir .'/layouts/administrator/', 3);
+        $q->insert($root_dir .'/layouts/frontend/', 3);
 
         parent::__construct($model, $q);
     }
